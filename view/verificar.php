@@ -17,12 +17,12 @@ $result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
 $num_rows = @mysql_num_rows($result);
 if(!$num_rows) {
-    this->load->view(error.php);
+    //$this->load->view(error.php);
+	View::load("error.php");
 }
-
 else{
-
-    this->load->view(principal.php);
+    //$this->load->view(principal.php);
+	View::load("principal.php");
 }
 
 

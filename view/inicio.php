@@ -5,7 +5,7 @@
 
 -!>
 <head>
-<link rel="stylesheet" type="text/css" href='css/estilo.css'>
+<link rel="stylesheet" type="text/css" href='view/css/estilo.css'>
 
 </head>
 <header>
@@ -25,7 +25,7 @@
 <br>
 <br>
 <br>
-<form id="formulario" action="verificar.php" method="post">
+<form id="formulario" action="view/verificar.php" method="post">
    usuario:<input name="user" id="input1"></><br>
  contrase&ntildea:<input name="pass" id="input2"></><br>
  <input name="login" type="submit" value="ingresar">

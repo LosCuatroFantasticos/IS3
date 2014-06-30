@@ -14,7 +14,8 @@
 
  /*** include the init.php file ***/
  include 'includes/init.php'; 
- $this->load->view("inicio.php");
+ //$this->load->view("inicio.php");
+ include 'view/inicio.php';
    
 ?>
 
