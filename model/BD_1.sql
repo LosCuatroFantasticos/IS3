@@ -1,68 +1,63 @@
--- Create Table: HistoricoMedicaciones
---------------------------------------------------------------------------------
+-- Create Table: HistoricoMedicaciones--------------------------------------------------------------------------------
 CREATE TABLE HistoricoMedicaciones
 (
 	`idHistorico` INT NOT NULL AUTO_INCREMENT
-	,PRIMARY KEY (idHistorico)
 	,`idMedicamento` INT NOT NULL 
 	,`horarioTomado` DATETIME NOT NULL 
+	,PRIMARY KEY (`idHistorico`)
 )
-ENGINE=INNODB
+ENGINE=INNODB;
 
 
 
--- Create Table: Medicamentos
---------------------------------------------------------------------------------
+-- Create Table: Medicamentos--------------------------------------------------------------------------------
 CREATE TABLE Medicamentos
 (
 	`idMedicamento` INT NOT NULL AUTO_INCREMENT
-	,PRIMARY KEY (idMedicamento)
 	,`nombre` VARCHAR(250) NOT NULL 
 	,`stock` INT NOT NULL 
+	,PRIMARY KEY (`idMedicamento`)
 )
-ENGINE=INNODB
+ENGINE=INNODB;
 
 
 
--- Create Table: Usuario
---------------------------------------------------------------------------------
+-- Create Table: Usuario--------------------------------------------------------------------------------
 CREATE TABLE Usuario
 (
-	`idUsuario` INT NOT NULL AUTO_INCREMENT
-	,PRIMARY KEY (idUsuario)
+	`idUsuario` INT NOT NULL AUTO_INCREMENT	
 	,`password` VARCHAR(250) NOT NULL 
 	,`nombreUsuario` VARCHAR(250) NOT NULL 
 	,`idRol` INT NOT NULL 
+	,PRIMARY KEY (`idUsuario`)
 )
-ENGINE=INNODB
+ENGINE=INNODB;
 
 
 
--- Create Table: Rol
---------------------------------------------------------------------------------
+-- Create Table: Rol--------------------------------------------------------------------------------
 CREATE TABLE Rol
 (
 	`idRol` INT NOT NULL AUTO_INCREMENT
-	,PRIMARY KEY (idRol)
+	,PRIMARY KEY (`idRol`)
 	,`tipoRol` VARCHAR(250)  NULL 
 )
-ENGINE=INNODB
+ENGINE=INNODB;
 
 
 
--- Create Table: PlanMedicaciones
---------------------------------------------------------------------------------
+-- Create Table: PlanMedicaciones--------------------------------------------------------------------------------
 CREATE TABLE PlanMedicaciones
 (
 	`idPlanMedicaciones` INT NOT NULL AUTO_INCREMENT
-	,PRIMARY KEY (idPlanMedicaciones)
+	,PRIMARY KEY (`idPlanMedicaciones`)
 	,`idMedicamento` INT NOT NULL 
 	,`fechayHora` DATETIME NOT NULL 
 	,`dosis` INT NOT NULL 
 	,`seRepite` BIT NOT NULL 
 	,`fechaFin` DATETIME  NULL 
 )
-ENGINE=INNODB
+ENGINE=INNODB;
 
 
 
