@@ -1,7 +1,7 @@
 <?php
+Class DB{
 
-
-function conectar(){
+static function conectar(){
 
     $db_type='mysql';
     $db_host='localhost';
@@ -23,8 +23,9 @@ function conectar(){
 }
 
 	
-function desconectar ($conn) {
+static function desconectar ($conn) {
     //$db->disconnect();
 	unset($conn);
+}
 }
 ?>
