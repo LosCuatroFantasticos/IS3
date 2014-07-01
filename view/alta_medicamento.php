@@ -16,7 +16,7 @@ if (!login_check())
 <div id= class=>    
      
 		<h2> Alta Medicamento </h2>
-			<form id="formulario" class="" action='../controller/Medicamento/alta_medicamento.php' method='post'>
+			<form id="formulario" class="" action='controller/Medicamento/alta_medicamento.php' method='post'>
 				<p>Nombre de Medicamento: <input name='nombre'  id='nombre' type='text'  value=''  class='' required></p>
 				<p> Stock	<input name='stock' id='stock' type='number' value='' > </p>
 				

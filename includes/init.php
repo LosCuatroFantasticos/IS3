@@ -1,7 +1,6 @@
 <?php
 	define ('debug', true);
 	define ("InitLoaded", true);
-	
  /*** define the site path constant ***/
  $site_path = __DIR__ . "/../";
  define ('__SITE_PATH', $site_path);
