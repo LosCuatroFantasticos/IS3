@@ -1,5 +1,6 @@
 <?php
 	define ('debug', true);
+	define ("InitLoaded", true);
 	
  /*** define the site path constant ***/
  $site_path = realpath(__DIR__ . "/../");
