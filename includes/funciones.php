@@ -70,7 +70,7 @@
 		session_start();            // Start the PHP session 
 		session_regenerate_id();    // regenerated the session, delete the old one. 
 	}
-	function login_check() 
+	function login_check($idRol = null) 
 	{
 		$mysqli = DB::conectar();
 		// Check if all session variables are set 
@@ -85,7 +85,7 @@
 			// Get the user-agent string of the user.
 			$user_browser = $_SERVER['HTTP_USER_AGENT'];
 	 
-			if ($stmt = $mysqli->prepare("SELECT password 
+			if ($stmt = $mysqli->prepare("SELECT password, idRol 
 										  FROM usuario 
 										  WHERE idUsuario = ? LIMIT 1")) {
 				// Bind "$user_id" to parameter. 
@@ -95,11 +95,12 @@
 	 
 				if ($stmt->num_rows == 1) {
 					// If the user exists get variables from result.
-					$stmt->bind_result($password);
+					$stmt->bind_result($password,$db_idRol);
 					$stmt->fetch();
 					$login_check = hash('sha512', $password . $user_browser);
-	 
-					if ($login_check == $login_string) {
+					if (!is_null($idRol) and $idRol < $db_idRol)
+					{	return false;}//No alcanza el rol					
+					elseif ($login_check == $login_string) {
 						// Logged In!!!! 
 						return true;
 					} else {

@@ -10,7 +10,12 @@ if (!login_check())
 }
 ?>
 <ul>
+<?php
+if (login_check())
+{
+?>
 <li>
 <a href="index.php?view=alta_medicamento.php">Alta de medicamento</a>
 </li>
+<?php } ?>
 </ul>
