@@ -18,4 +18,7 @@ if (login_check())
 <a href="index.php?view=alta_medicamento.php">Alta de medicamento</a>
 </li>
 <?php } ?>
+<li>
+<a href="index.php?view=listado_medicamentos.php">Listado de medicamentos</a>
+</li>
 </ul>

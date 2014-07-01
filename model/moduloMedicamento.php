@@ -12,9 +12,9 @@ include_once "db.php";
 class Medicamento
 	{
         public function agregarMedicamento($nombre,$stock)
-        {
+        {	
+			$db = DB::conectar(); //funcion que conecta con bd
 				try{
-				  $db = DB::conectar(); //funcion que conecta con bd
 					$stmt = $db->prepare("SELECT `idMedicamento`,  `stock`
 										  FROM `medicamentos` 
 										  WHERE nombre = ? LIMIT 1"); 
@@ -45,6 +45,25 @@ class Medicamento
 				  }		
 				  DB::desconectar($db);
 				  return TRUE;
+		}
+		
+		public function listadoMedicamentos()
+		{
+			$db = DB::conectar(); //funcion que conecta con bd
+			try
+			{
+				$result = $db->query("SELECT `idMedicamento`,`nombre`,`stock`
+									  FROM `medicamentos` "); 										  
+				while($row = $result->fetch_array())
+				{
+					$rows[] = $row;
+				}
+				$result->close();
+			}
+			catch(PDOException $e)
+			{	return $e->getMessage();}		
+			DB::desconectar($db);
+			return $rows;
 		}
 	}
 

@@ -12,7 +12,7 @@ if (!login_check())
 <header></header> 
 <head></head>
 <body>
-
+<?php View::load("menu.php");?>
 <div id= class=>    
      
 		<h2> Alta Medicamento </h2>
