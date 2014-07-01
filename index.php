@@ -11,7 +11,10 @@
  /*** include the init.php file ***/
  include 'includes/init.php'; 
  //$this->load->view("inicio.php");
- include 'view/inicio.php';
+ if (isset($_GET['view']))
+ {	View::load($_GET['view']);}
+ else
+ {	View::load('inicio.php');}
    
 ?>
 

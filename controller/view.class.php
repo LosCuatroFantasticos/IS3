@@ -9,7 +9,7 @@ Class View{
    * @param mixed $value
    * @ return void
    */
-   static public function load($viewPath)
+   static public function load($viewPath, $params = array())
    {
 		$viewPath = __SITE_PATH . "/view/" . $viewPath;
 		if (file_exists($viewPath))

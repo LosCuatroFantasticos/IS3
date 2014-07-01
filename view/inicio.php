@@ -27,7 +27,7 @@
 <br>
 <form id="formulario" action="view/verificar.php" method="post">
    usuario:<input name="user" id="input1"></><br>
- contrase&ntildea:<input name="pass" id="input2"></><br>
+ contrase&ntilde;a:<input type="password" name="pass" id="input2"></><br>
  <input name="login" type="submit" value="ingresar">
   
 </form>

@@ -3,29 +3,27 @@ Class DB{
 
 static function conectar(){
 
-    $db_type='mysql';
     $db_host='localhost';
     $db_database='pastillero';
     $db_username='root';
     $db_password='';
  
 	
-	try{
+	$mysqli = mysqli_connect($db_host, $db_username, $db_password, $db_database);
 	
-		$conn = new PDO('mysql:host=localhost;dbname=pastillero', $db_username, $db_password);
-		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	
-	}catch(PDOException $e){
-			return $e->getMessage();
+	if (mysqli_connect_error()) 
+	{
+		die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
 	}
-
-	return $conn;
+	return $mysqli;
 }
 
 	
-static function desconectar ($conn) {
-    //$db->disconnect();
-	unset($conn);
-}
+	static function desconectar ($mysqli) 
+	{
+		//$db->disconnect();
+		//unset($conn);
+		$mysqli->close();
+	}
 }
 ?>
