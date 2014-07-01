@@ -3,7 +3,7 @@
 	define ("InitLoaded", true);
 	
  /*** define the site path constant ***/
- $site_path = realpath(__DIR__ . "/../");
+ $site_path = __DIR__ . "/../";
  define ('__SITE_PATH', $site_path);
    /*** include the controller class ***/ 
    include __SITE_PATH . '/controller/'. 'controller_base.class.php';
