@@ -21,7 +21,13 @@ Controller::load("Medicamento/listado_medicamento.php");
 			<?php
 				foreach(MedicamentoController::listado() as $row)
 				{
+					?>
+					<li>
+					<?php
 					echo $row['idMedicamento'] . " - " . $row['nombre'] . " (" . $row['stock'] . ")";
+					?>
+					</li>
+					<?php
 				}
 			?>
 		</ul>
