@@ -10,15 +10,21 @@ if (!login_check())
 }
 ?>
 <ul>
-<?php
-if (login_check())
-{
-?>
-<li>
-<a href="index.php?view=alta_medicamento.php">Alta de medicamento</a>
-</li>
-<?php } ?>
-<li>
-<a href="index.php?view=listado_medicamentos.php">Listado de medicamentos</a>
-</li>
+	<?php
+	if (login_check())
+	{
+	?>
+	<li>Medicamentos
+		<ul>
+			<li><a href="index.php?view=alta_medicamento.php">Alta de medicamento</a></li>
+			<li><a href="index.php?view=listado_medicamentos.php">Listado de medicamentos</a></li>
+		</ul>
+	</li>
+	<?php } ?>
+	<li>Alertas
+		<ul>
+			<li><a href="index.php?view=alta_alerta.php">Alta de alerta</a></li>
+			<li><a href="index.php?view=listado_alertas.php">Listado de alertas</a></li>
+		</ul>
+	</li>
 </ul>

@@ -11,12 +11,15 @@ if (!login_check())
 require "model/moduloAlerta.php";
 
 Class AlertaController
-{
-	static public function listado()
-	{
-		$a= new Alerta ();
-		return $a->listadoAlertas();
+{//Si se le pasa el id de una medicamento devuelve las alertas para ese medicamento, sino devuelve todas las alertas.
+	static public function listado($idMedicamento = null)
+	{		
+		if ($idMedicamento == null)
+		{	return Alerta::listadoAlertas();}
+		else
+		{	return Alerta::listadoAlertasPara($idMedicamento);}
 	}
+	
 }
 
 
