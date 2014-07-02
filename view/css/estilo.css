@@ -1,14 +1,15 @@
 body{
    
    color:black;
-   background-color:yellow;
+   background-image: url("background.jpg");
       
 
 }
 
 
 #workzone{
-   background-color:blue;
+   background-color: rgba(0,0,255,0.2);
+   border-radius:10px;
    text-align:center;
    margin-left:50px;
    margin-right:50px;
