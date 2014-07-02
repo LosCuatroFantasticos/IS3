@@ -10,8 +10,11 @@ Controller::load("alertaController.php");
 
 <html>
 <title>Sistema Domotico - Listado de alertas</title>
-<header></header> 
-<head></head>
+<header></header>
+ 
+<head>
+<link rel="stylesheet" type="text/css" href='view/css/estilo_listado.css' >
+</head>
 <body>
 
 <div >    

@@ -11,7 +11,9 @@ Controller::load("Medicamento/listado_medicamento.php");
 <html>
 <title>Sistema Domotico - Listado Medicamentos</title>
 <header></header> 
-<head></head>
+<head>
+<link rel="stylesheet" type="text/css" href='view/css/estilo_listado.css'>
+</head>
 <body>
 
 <div id= class=>    

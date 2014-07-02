@@ -10,7 +10,10 @@ if (!login_check())
 <html>
 <title>Sistema Domotico - Alta Medicamento</title>
 <header></header> 
-<head></head>
+<head>
+<link rel="stylesheet" type="text/css" href='estilo_formulario.css'>
+
+</head>
 <body>
 <?php View::load("menu.php");?>
 <div id= class=>    

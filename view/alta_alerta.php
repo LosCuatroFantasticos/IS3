@@ -11,7 +11,10 @@ Controller::load("Medicamento/listado_medicamento.php");
 <html>
 <title>Sistema Domotico - Alta de alerta</title>
 <header></header> 
-<head></head>
+<head>
+<link rel="stylesheet" type="text/css" href='view/css/estilo_formulario.css'>
+
+</head>
 <body>
 
 <div id= class=>    
