@@ -14,7 +14,7 @@ Class MedicamentoController
 {
 	static public function listado()
 	{
-		$m= new Medicamento ();
+		$m= new Medicamento();
 		return $m->listadoMedicamentos();
 	}
 }

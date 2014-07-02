@@ -17,20 +17,32 @@ Controller::load("Medicamento/listado_medicamento.php");
 <div id= class=>    
 		<?php View::load("menu.php");?>
 		<h2> Listado Medicamentos </h2>
-		<ul>
+		<table>
+			<tr>
+			  <th>idMedicamento</th>
+			  <th>nombre</th> 
+			  <th>stock</th>
+			  <th>Alertas</th>
+			</tr>
 			<?php
 				foreach(MedicamentoController::listado() as $row)
 				{
 					?>
-					<li>
-					<?php
-					echo $row['idMedicamento'] . " - " . $row['nombre'] . " (" . $row['stock'] . ")";
-					?>
-					</li>
+					<tr>
+						<td><?php echo $row['idMedicamento']; ?></td>
+						<td><?php echo $row['nombre']; ?></td> 
+						<td><?php echo $row['stock']; ?></td>
+						<td><form action='index.php?view=listado_alertas.php' method='post'>
+								<input hidden value="<?php echo $row['idMedicamento']; ?>" name="idMedicamento">
+								<input hidden value="<?php echo $row['nombre']; ?>" name="nombre">	
+								<input type="submit" value="Ver alertas">
+							</form>
+						</td>
+					</tr>
 					<?php
 				}
 			?>
-		</ul>
+		</table>
 		
 </div>
 	 
