@@ -1,3 +1,9 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/estilo_error.css">
+
+</head>
+<body>
 <?php 
 if ( (! defined ("InitLoaded")) 
 	or (!InitLoaded) )
@@ -11,3 +17,6 @@ if (!login_check())
 echo $params["error"] . "<br />";
 
 ?>
+
+</body>
+</html>
