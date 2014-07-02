@@ -1,5 +1,7 @@
 <?php 
 
+if (! defined("IndexLoaded"))
+{	die("Acceso incorrecto");}
 Class View{
 
 /*

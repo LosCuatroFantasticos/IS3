@@ -1,4 +1,6 @@
 <?php
+if (!defined("IndexLoaded"))
+{	die("Acceso incorrecto");}	
 Class DB{
 
 static function conectar(){

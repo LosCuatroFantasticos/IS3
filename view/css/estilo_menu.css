@@ -1,14 +1,13 @@
 .cssmenu,
 .cssmenu ul,
 .cssmenu ul li,
-.cssmenu ul li a {
+.cssmenu ul li a ,.cssmenu ul li p  {
   margin: 0;
   padding: 0;
   border: 0;
   list-style: none;
   line-height: 1;
   display: block;
-  position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -67,7 +66,7 @@
   z-index: 2;
   bottom: 10px;
 }
-.cssmenu ul li a {
+.cssmenu ul li a ,.cssmenu ul li p  {
   display: block;
   padding: 10px 30px;
   text-decoration: none;

@@ -1,10 +1,5 @@
 
 <html>
-<!- Es la base no tiene CSS ni nada todo lo del estilo deberia ir en un archivo .css
-  y hay que cambiar el estilo es solo la maquetacion jajjajaaja
-
-
--!>
 <head>
 <link rel="stylesheet" type="text/css" href='view/css/estilo.css'>
 <link rel="stylesheet" type="text/css" href='view/css/estilo_formulario.css'>
@@ -16,6 +11,5 @@
 <body>
 
 <div id="cssmenu" class="cssmenu">
-
 <?php View::load("menu.php");?>
 </div>

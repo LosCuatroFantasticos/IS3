@@ -1,7 +1,8 @@
-<?php
-sec_session_start() 
-?>
 
+<?php 
+if (! defined("IndexLoaded"))
+{	die("Acceso incorrecto");}
+?>
 
 <div id="banner">
     

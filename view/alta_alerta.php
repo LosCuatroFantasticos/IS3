@@ -1,6 +1,7 @@
 <?php
-include_once 'includes/init.php'; 
-sec_session_start(); // Our custom secure way of starting a PHP session.
+
+if (!defined("IndexLoaded"))
+{	die("Acceso incorrecto");}
 if (!login_check())
 {
 	View::goToPage("index.php"); 

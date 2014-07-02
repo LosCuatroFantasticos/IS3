@@ -1,4 +1,6 @@
 <?php
+if (!defined("IndexLoaded"))
+{	die("Acceso incorrecto");}
   class Controller {
 
           

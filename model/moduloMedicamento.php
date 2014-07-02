@@ -1,12 +1,9 @@
 <?php
-if ( (! defined ("InitLoaded")) 
-	or (!InitLoaded) )
-{
-	header('Location: ../index.php');
-}
+if (!defined("IndexLoaded"))
+{	die("Acceso incorrecto");}	
 if (!login_check())
 {
-	header('Location: index.php');
+	View::goToPage("index.php");
 }
 include_once "db.php";	
 class Medicamento
