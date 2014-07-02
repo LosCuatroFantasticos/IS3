@@ -7,15 +7,6 @@ if (!login_check())
 }
 ?>
 
-<html>
-<title>Sistema Domotico - Alta Medicamento</title>
-<header></header> 
-<head>
-<link rel="stylesheet" type="text/css" href='estilo_formulario.css'>
-
-</head>
-<body>
-<?php View::load("menu.php");?>
 <div id= class=>    
      
 		<h2> Alta Medicamento </h2>
@@ -28,7 +19,3 @@ if (!login_check())
 			 </form>
 </div>
 	 
-
-
-</body>
-</html>

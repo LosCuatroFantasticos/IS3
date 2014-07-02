@@ -8,16 +8,7 @@ if (!login_check())
 Controller::load("Medicamento/listado_medicamento.php");
 ?>
 
-<html>
-<title>Sistema Domotico - Listado Medicamentos</title>
-<header></header> 
-<head>
-<link rel="stylesheet" type="text/css" href='view/css/estilo_listado.css'>
-</head>
-<body>
-
 <div id= class=>    
-		<?php View::load("menu.php");?>
 		<h2> Listado Medicamentos </h2>
 		<table>
 			<tr>
@@ -48,7 +39,3 @@ Controller::load("Medicamento/listado_medicamento.php");
 		
 </div>
 	 
-
-
-</body>
-</html>

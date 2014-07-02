@@ -7,18 +7,7 @@ if (!login_check())
 }
 Controller::load("alertaController.php");
 ?>
-
-<html>
-<title>Sistema Domotico - Listado de alertas</title>
-<header></header>
- 
-<head>
-<link rel="stylesheet" type="text/css" href='view/css/estilo_listado.css' >
-</head>
-<body>
-
 <div >    
-		<?php View::load("menu.php"); ?>
 		<h2> Listado de alertas <?php echo (! isset($_POST['idMedicamento'])?"":"para el medicamento " . $_POST['nombre']);?></h2>
 		<?php 
 		$listado = isset($_POST['idMedicamento'])?AlertaController::listado($_POST['idMedicamento']):AlertaController::listado();
@@ -61,5 +50,3 @@ Controller::load("alertaController.php");
 		}
 		?>
 </div>
-</body>
-</html>

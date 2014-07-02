@@ -2,24 +2,6 @@
 sec_session_start() 
 ?>
 
-<html>
-<!- Es la base no tiene CSS ni nada todo lo del estilo deberia ir en un archivo .css
-  y hay que cambiar el estilo es solo la maquetacion jajjajaaja
-
-
--!>
-<head>
-<link rel="stylesheet" type="text/css" href='view/css/estilo.css'>
-
-</head>
-<header>
-   
-
-
-   
-   
-</header>
-<body>
 
 <div id="banner">
     
@@ -53,13 +35,5 @@ Ya Logueado (<a href="index.php?view=logout.php">Desloguearse</a>)
 <br>
 <br>
 </div>
-<?php
-  
-
-?>
-</body> 
-
-<footer></footer>
-</html>
  
 

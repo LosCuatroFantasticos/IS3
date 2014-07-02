@@ -7,18 +7,7 @@ if (!login_check())
 }
 Controller::load("Medicamento/listado_medicamento.php");
 ?>
-
-<html>
-<title>Sistema Domotico - Alta de alerta</title>
-<header></header> 
-<head>
-<link rel="stylesheet" type="text/css" href='view/css/estilo_formulario.css'>
-
-</head>
-<body>
-
 <div id= class=>    
-	<?php View::load("menu.php");?>
 	<h2> Alta de alerta </h2>
 	<form id="formulario" class="" action='controller/alta_alerta.php' method='post'>
 		<p>Medicamento	<select name='idMedicamento' id='idMedicamento'>
@@ -40,7 +29,3 @@ Controller::load("Medicamento/listado_medicamento.php");
 	</form>		
 </div>
 	 
-
-
-</body>
-</html>
