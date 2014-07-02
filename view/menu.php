@@ -9,6 +9,7 @@ if (!login_check())
 	header('Location: index.php');
 }*/
 ?>
+
 <ul>
 	<?php
 	if (login_check())
