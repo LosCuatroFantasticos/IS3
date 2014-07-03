@@ -11,9 +11,10 @@ Controller::load("Medicamento/listado_medicamento.php");
 
 <div id="" class="contenedor" >    
 		<h2> Listado Medicamentos </h2>
+		<div class="tableContenedor" >    
 		<table>
 			<tr>
-			  <th>idMedicamento</th>
+			  <th>Id</th>
 			  <th>Nombre</th> 
 			  <th>Stock</th>
 			  <th>Alertas</th>
@@ -26,7 +27,7 @@ Controller::load("Medicamento/listado_medicamento.php");
 						<td><?php echo $row['idMedicamento']; ?></td>
 						<td><?php echo $row['nombre']; ?></td> 
 						<td><?php echo $row['stock']; ?></td>
-						<td><form action='index.php?view=listado_alertas.php' method='post'>
+						<td><form action='index.php?view=listado_alertas.php' method='post' style="margin:0px;">
 								<input hidden value="<?php echo $row['idMedicamento']; ?>" name="idMedicamento">
 								<input hidden value="<?php echo $row['nombre']; ?>" name="nombre">	
 								<input type="submit" value="Ver alertas">
@@ -38,5 +39,6 @@ Controller::load("Medicamento/listado_medicamento.php");
 			?>
 		</table>
 		
+</div>
 </div>
 	 

@@ -7,9 +7,11 @@ if (!login_check())
 	View::goToPage("index.php"); 
 }
 Controller::load("alertaController.php");
+Controller::load("Medicamento/listado_medicamento.php");
 ?>
 <div class="contenedor" >    
 		<h2> Listado de alertas <?php echo (! isset($_POST['idMedicamento'])?"":"para el medicamento " . $_POST['nombre']);?></h2>
+<div class="tableContenedor" >    
 		<?php 
 		$listado = isset($_POST['idMedicamento'])?AlertaController::listado($_POST['idMedicamento']):AlertaController::listado();
 
@@ -18,12 +20,12 @@ Controller::load("alertaController.php");
 		?>
 		<table >
 			<tr>
-			  <th>idPlanMedicaciones</th>
-			  <th>idMedicamento</th> 
-			  <th>fechayHora</th>
-			  <th>dosis</th>
-			  <th>seRepite</th>
-			  <th>fechaFin</th>
+			  <th>Id</th>
+			  <th>Medicamento</th> 
+			  <th>Fecha y Hora</th>
+			  <th>Dosis</th>
+			  <th>Repetitivo</th>
+			  <th>Fecha de fin</th>
 			</tr>
 			<?php
 				foreach($listado as $row)
@@ -31,7 +33,7 @@ Controller::load("alertaController.php");
 					?>
 					<tr>
 						<td><?php echo $row['idPlanMedicaciones']; ?></td>
-						<td><?php echo $row['idMedicamento']; ?></td> 
+						<td><?php echo MedicamentoController::getMedicamento($row['idMedicamento'])["nombre"]; ?></td> 
 						<td><?php echo $row['fechayHora']; ?></td>
 						<td><?php echo $row['dosis']; ?></td>
 						<td><input type="checkbox" <?php echo $row['seRepite']==1?"checked":""; ?> disabled></td> 
@@ -50,4 +52,5 @@ Controller::load("alertaController.php");
 		<?php 
 		}
 		?>
+</div>
 </div>
