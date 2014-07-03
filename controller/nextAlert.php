@@ -9,7 +9,6 @@ require "../model/moduloMedicamento.php";
 $alerta = Alerta::siguienteAlerta();
 if ($alerta != null)
 {
-var_dump($alerta);
 	$medicamento = Medicamento::getMedicamento($alerta["idMedicamento"]);
 	?>
 	{

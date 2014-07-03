@@ -27,7 +27,7 @@ if (! defined("IndexLoaded"))
 	
 	date_default_timezone_set('America/Argentina/Buenos_Aires');
    /*** auto load model class ***/
-    function __autoload($class_name) 
+    /*function __autoload($class_name) 
     {
 		$filename = strtolower($class_name).'.class.php';
 		$file = __SITE_PATH .'/model/'. $filename;
@@ -40,7 +40,7 @@ if (! defined("IndexLoaded"))
 
    /*** a new registry object***/
  
-   $registry = new registry;
+ //  $registry = new registry;
 
    /*** create the database registry object ***/
    //$registry->db = db::getInstance();

@@ -30,11 +30,14 @@ Controller::load("Medicamento/listado_medicamento.php");
 	</form>		
 </div>
 <script>
-$("#fechayHora").val((new Date).toJSON().slice(0,16));
-$("#fechayHora").min = (new Date).toJSON().slice(0,16);
+var today = new Date();
+today.setHours( today.getHours()+(today.getTimezoneOffset()/-60) );
+time = today.toJSON().slice(0, 16);
+$("#fechayHora").val(time);
+$("#fechayHora").min = time;
 $("#seRepite").change(function(){$("#divFechaFin").toggle();});
-$("#fechaFin").val((new Date).toJSON().slice(0,16));
-$("#fechaFin").min = (new Date).toJSON().slice(0,16);
+$("#fechaFin").val(time);
+$("#fechaFin").min = time;
 $("#formulario").submit(function()
 						{if ($("#dosis").val() == "")
 						{	return false;}
