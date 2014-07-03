@@ -14,7 +14,8 @@ class Alerta
 			try
 			{
 				$result = $db->query("SELECT `idPlanMedicaciones`,`idMedicamento`,`fechayHora`,`dosis`,`seRepite`,`fechaFin`
-									  FROM `PlanMedicaciones` "); 										  
+									  FROM `PlanMedicaciones` "); 	
+				$rows = Array();
 				while($row = $result->fetch_array())
 				{
 					$rows[] = $row;

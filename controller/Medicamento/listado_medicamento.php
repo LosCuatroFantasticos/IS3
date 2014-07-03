@@ -14,6 +14,10 @@ Class MedicamentoController
 		$m= new Medicamento();
 		return $m->listadoMedicamentos();
 	}
+	static public function getMedicamento($idMedicamento)
+		{
+			return Medicamento::getMedicamento($idMedicamento);
+		}
 }
 
 

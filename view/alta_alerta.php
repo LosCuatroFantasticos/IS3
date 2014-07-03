@@ -22,11 +22,25 @@ Controller::load("Medicamento/listado_medicamento.php");
 							?>
 						</select> </p>
 		<p>Fecha y Hora	<input type="datetime-local" name='fechayHora' id='fechayHora' > </p>
-		<p>D&oacute;sis	<input type="number" min=0 name='dosis' id='dosis' > </p>
+		<p>D&oacute;sis	<input type="number" min=0 name='dosis' id='dosis' required > </p>
 		<p>Se repite todas las semanas	<input type="checkbox" name='seRepite' id='seRepite' > </p>
-		<p>Fecha de fin	<input type="datetime-local" name='fechaFin' id='fechaFin' > </p>
+		<div id="divFechaFin" style="display: none;"><p>Fecha de fin	<input type="datetime-local" name='fechaFin' id='fechaFin' > </p></div>
 		<input type='submit' name='btnAlta' id='btnAlta' value='Registrar Alerta'>
 		<input name='btnCancel' type='button' id='btnCancel' value='Cancelar' onClick='window.history.back()'>
 	</form>		
 </div>
+<script>
+var today = new Date();
+today.setHours( today.getHours()+(today.getTimezoneOffset()/-60) );
+time = today.toJSON().slice(0, 16);
+$("#fechayHora").val(time);
+$("#fechayHora").min = time;
+$("#seRepite").change(function(){$("#divFechaFin").toggle();});
+$("#fechaFin").val(time);
+$("#fechaFin").min = time;
+$("#formulario").submit(function()
+						{if ($("#dosis").val() == "")
+						{	return false;}
+						});
+</script>
 	 
