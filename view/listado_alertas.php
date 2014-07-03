@@ -8,7 +8,7 @@ if (!login_check())
 }
 Controller::load("alertaController.php");
 ?>
-<div >    
+<div class="contenedor" >    
 		<h2> Listado de alertas <?php echo (! isset($_POST['idMedicamento'])?"":"para el medicamento " . $_POST['nombre']);?></h2>
 		<?php 
 		$listado = isset($_POST['idMedicamento'])?AlertaController::listado($_POST['idMedicamento']):AlertaController::listado();

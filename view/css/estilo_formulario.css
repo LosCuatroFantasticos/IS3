@@ -9,3 +9,52 @@ body{
 
 
 }
+
+
+
+#popup_box { 
+    display:none; /* Hide the DIV */
+    z-index:100; 
+    float:center;
+    /* additional features, can be omitted */
+    border:2px solid #fff;      
+    padding:15px;  
+    font-size:15px;  
+   /* -moz-box-shadow: 0 0 5px #fff;
+    -webkit-box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px #fff;*/
+    
+}
+.botones {	
+   border-top: 1px solid #96d1f8;
+   background: #096db0;
+ 
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   text-decoration: none;
+}
+
+.contenedor{	
+	border: 5px solid #7EB2E5; 
+	margin: 2% 6% 0% 6%;
+	text-align:center;
+	 background-color: rgba(0,0,255,0.2);
+	border-color: #88a;
+	border-radius: 55px;
+	padding:0.3em;
+	color: white;
+	border-top: 1px solid #96d1f8;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+}	

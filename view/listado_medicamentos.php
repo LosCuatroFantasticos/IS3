@@ -9,13 +9,13 @@ if (!login_check())
 Controller::load("Medicamento/listado_medicamento.php");
 ?>
 
-<div id= class=>    
+<div id="" class="contenedor" >    
 		<h2> Listado Medicamentos </h2>
 		<table>
 			<tr>
 			  <th>idMedicamento</th>
-			  <th>nombre</th> 
-			  <th>stock</th>
+			  <th>Nombre</th> 
+			  <th>Stock</th>
 			  <th>Alertas</th>
 			</tr>
 			<?php

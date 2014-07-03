@@ -9,5 +9,32 @@ body{
 table{
    background-color:white;
    border-radius:10px;
+   padding:2px;
+   cursor:pointer;
+   display:block;
+   width:290px;
+   margin: 0 auto;
+   text-align:left;
+   
 
 }
+
+
+.contenedor{	
+	border: 5px solid #7EB2E5; 
+	margin: 2% 6% 0% 6%;
+	text-align:center;
+	 background-color: rgba(0,0,255,0.2);
+	border-color: #88a;
+	border-radius: 55px;
+	padding:0.3em;
+	color: white;
+	border-top: 1px solid #96d1f8;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+}	
