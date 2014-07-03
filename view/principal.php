@@ -8,8 +8,3 @@ if (!login_check())
 }
 ?>
 
-
-<div id="cuerpo">
-Aca ir&iacute;a el cuerpo
-</div>
-
