@@ -11,6 +11,14 @@ body{
 }
 
 
+form p{
+    margin-left: auto;
+	margin-right: auto;
+	width: 6em;
+	margin: 1% 2% 2% 42%;
+	color:b
+	
+}
 
 #popup_box { 
     display:none; /* Hide the DIV */
@@ -27,7 +35,7 @@ body{
 }
 .botones {	
    border-top: 1px solid #96d1f8;
-   background: #096db0;
+   background: #4682B4;
  
    -webkit-border-radius: 6px;
    -moz-border-radius: 6px;
@@ -35,7 +43,7 @@ body{
    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
    box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   text-shadow: rgba(0,0,0,4) 0 1px 0;
    color: white;
    text-decoration: none;
 }
