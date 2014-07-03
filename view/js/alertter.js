@@ -23,7 +23,7 @@ $.getJSON("controller/nextAlert.php")
 		console.log( data );
 		setTimeout($.proxy(raiseAlert,data), data.time);
 	  })
-	.fail(function() {
+	.fail(function(data) {
 		console.log( "error" );
 	})
 };

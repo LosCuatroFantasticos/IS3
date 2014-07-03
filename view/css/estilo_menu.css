@@ -51,6 +51,8 @@
   border-right: 1px solid rgba(0, 0, 0, 0.22);
   z-index: 1;
 }
+
+/*
 .cssmenu ul li::after {
   content: '';
   width: 100%;
@@ -65,7 +67,7 @@
   background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   z-index: 2;
   bottom: 10px;
-}
+}*/
 .cssmenu ul li a ,.cssmenu ul li p  {
   display: block;
   padding: 10px 30px;

@@ -34,7 +34,7 @@ class Alerta
 			{
 				$result = $db->query("SELECT `idPlanMedicaciones`,`idMedicamento`,`fechayHora`,`dosis`,`seRepite`,`fechaFin`
 									  FROM `PlanMedicaciones` 
-									  Order by `fechayHora` desc
+									  Order by `fechayHora` asc
 									  Limit 1"); 										  
 				$row = $result->fetch_array();
 				$result->close();
@@ -90,10 +90,12 @@ class Alerta
 			$db = DB::conectar(); //funcion que conecta con bd
 				try{
 						if ($seRepite = 1)
-						{	$resul=$db->prepare("update `PlanMedicaciones` set `fechayHora` =  DATE_ADD(`fechayHora`,INTERVAL 1 WEEK) where `idAlerta` = ? and seRepite = 1");}
-						$resul->bind_param('i',$idAlerta);
-						$resul->execute();
-						$resul=$db->prepare("delete from `PlanMedicaciones` where `idAlerta` = ? and (seRepite = 0 or fechaFin < NOW())");
+						{	
+							$resul= $db->prepare("update `PlanMedicaciones` set `fechayHora` =  DATE_ADD(`fechayHora`,INTERVAL 1 WEEK) where `idPlanMedicaciones` = ? and seRepite = 1");
+							$resul->bind_param('i',$idAlerta);
+							$resul->execute();
+						}
+						$resul=$db->prepare("delete from `PlanMedicaciones` where `idPlanMedicaciones` = ? and (seRepite = 0 or fechaFin < NOW())");
 						$resul->bind_param('i',$idAlerta);
 						$resul->execute();
 				  }

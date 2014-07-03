@@ -24,7 +24,8 @@ if (! defined("IndexLoaded"))
    include (__SITE_PATH ."/model/db.php"); 
    
    include (__SITE_PATH ."/includes/funciones.php");
-
+	
+	date_default_timezone_set('America/Argentina/Buenos_Aires');
    /*** auto load model class ***/
     function __autoload($class_name) 
     {

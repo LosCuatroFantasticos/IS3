@@ -23,7 +23,7 @@ Controller::load("Medicamento/listado_medicamento.php");
 						</select> </p>
 		<p>Fecha y Hora	<input type="datetime-local" name='fechayHora' id='fechayHora' > </p>
 		<p>D&oacute;sis	<input type="number" min=0 name='dosis' id='dosis' > </p>
-		<p>Se repite todos los dias	<input type="checkbox" name='seRepite' id='seRepite' > </p>
+		<p>Se repite todas las semanas	<input type="checkbox" name='seRepite' id='seRepite' > </p>
 		<p>Fecha de fin	<input type="datetime-local" name='fechaFin' id='fechaFin' > </p>
 		<input type='submit' name='btnAlta' id='btnAlta' value='Registrar Alerta'>
 		<input name='btnCancel' type='button' id='btnCancel' value='Cancelar' onClick='window.history.back()'>
