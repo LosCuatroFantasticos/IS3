@@ -43,6 +43,21 @@ class Medicamento
 				  DB::desconectar($db);
 				  return TRUE;
 		}
+        public function descontarDosis($idMedicamento,$dosis)
+        {	
+			$db = DB::conectar(); //funcion que conecta con bd
+				try{				
+					$resul=$db->prepare("UPDATE `medicamentos` SET `stock` = `stock` - ? WHERE `idMedicamento` = ?");
+					$resul->bind_param('ii',$dosis,$idMedicamento);
+					$resul->execute();
+					$resul->store_result();		
+				  }
+				  catch(PDOException $e){
+					return $e->getMessage();
+				  }		
+				  DB::desconectar($db);
+				  return TRUE;
+		}
 		
 		public function listadoMedicamentos()
 		{
@@ -61,6 +76,27 @@ class Medicamento
 			{	return $e->getMessage();}		
 			DB::desconectar($db);
 			return $rows;
+		}
+		
+		static public function getMedicamento($idMedicamento)
+		{
+			$db = DB::conectar(); //funcion que conecta con bd
+			try
+			{
+				$stmt = $db->prepare("SELECT `idMedicamento`,`nombre`,`stock`
+									  FROM `medicamentos` 
+									  WHERE `idMedicamento` = ?
+									  Limit 1"); 		
+				$stmt->bind_param('i',$idMedicamento);
+				$stmt->execute();
+				$result = $stmt->get_result();										  
+				$row = $result->fetch_array();
+				$result->close();
+			}
+			catch(PDOException $e)
+			{	return $e->getMessage();}		
+			DB::desconectar($db);
+			return $row;
 		}
 	}
 

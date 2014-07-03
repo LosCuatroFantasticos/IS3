@@ -1,10 +1,7 @@
 <?php 
-if (!defined("IndexLoaded"))
-{	die("Acceso incorrecto");}	
-if (!login_check())
-{
-	View::goToPage("index.php");
-}
+ define ("IndexLoaded", true);
+ include '../../includes/init.php'; 
+ sec_session_start();
 require "../../model/moduloMedicamento.php";
 
 $m= new Medicamento ();
