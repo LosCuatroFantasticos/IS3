@@ -24,6 +24,7 @@ $.getJSON("controller/nextAlert.php")
 		tiempo = data.time/1000;	
 		$("#contenedorTiempo").html(getTimeFromSeconds(tiempo));
 		setInterval(timer,1000);
+		$("#recuadroAlerta").show(500);
 		setTimeout($.proxy(raiseAlert,data), data.time);
 	  })
 	.fail(function(data) {
@@ -73,5 +74,4 @@ timer = function ()
 $( document ).ready(function() {
     buscarSiguienteAlerta();
 	$("body").append($("<div id='recuadroAlerta'>Tomar <span id='contenedorRemedio'></span> en <span id='contenedorTiempo'></span> </div>"));
-	$("#recuadroAlerta").show(500);
   });
