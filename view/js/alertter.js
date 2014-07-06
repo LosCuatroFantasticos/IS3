@@ -28,6 +28,7 @@ $.getJSON("controller/nextAlert.php")
 		setTimeout($.proxy(raiseAlert,data), data.time);
 	  })
 	.fail(function(data) {
+	    $("#recuadroAlerta").hide();
 		console.log( "error" );
 	})
 };
