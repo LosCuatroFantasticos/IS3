@@ -9,6 +9,16 @@ if (!defined("IndexLoaded"))
 	{
 	?>
 <ul>
+	<?php
+	if (login_check(2))
+	{
+	?>
+	<li><p>Historico</p>
+		<ul>
+				<li><a href="index.php?view=listado_historico.php">Historico de Medicaciones</a></li>
+		</ul>
+	</li>
+		<?php } ?>
 	<li><p>Medicamentos</p>
 		<ul>
 	<?php
