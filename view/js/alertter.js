@@ -1,9 +1,12 @@
 tiempo=0;
 raiseAlert = function ()
 {
+	clearInterval(interval);
+	$("#sonidoalerta").get(0).play();
+	mandarMail(this.idMedicamento,this.dosis,this.idAlerta,this.seRepite,this.nombre,this.time);
 	alert("Alerta de medicamento! Tomar " + this.dosis + " de " + this.nombre);
 	descontarDosisDeStock(this.idMedicamento,this.dosis,this.idAlerta,this.seRepite);
-	buscarSiguienteAlerta();
+	setTimeout(buscarSiguienteAlerta,2000);
 };
 descontarDosisDeStock = function (idMedicamento, dosis,idAlerta,seRepite)
 {
@@ -16,6 +19,17 @@ descontarDosisDeStock = function (idMedicamento, dosis,idAlerta,seRepite)
 	})
 };
 
+mandarMail = function (idMedicamento, dosis, idAlerta, seRepite, medicamento, fechaYHora)
+{
+	$.post("controller/mailer.php",{ idMedicamento: idMedicamento, dosis: dosis,idAlerta: idAlerta,seRepite: seRepite, medicamento: medicamento, fechaYHora: fechaYHora })
+	.done(function() {
+		console.log( "Mail Enviado" );
+	  })
+	.fail(function() {
+		console.log( "error al mandar mail." );
+	})
+};
+
 buscarSiguienteAlerta = function ()
 {
 $.getJSON("controller/nextAlert.php")
@@ -23,7 +37,7 @@ $.getJSON("controller/nextAlert.php")
 		$("#contenedorRemedio").html(data.nombre);
 		tiempo = data.time/1000;	
 		$("#contenedorTiempo").html(getTimeFromSeconds(tiempo));
-		setInterval(timer,1000);
+		interval = setInterval(timer,1000);
 		$("#recuadroAlerta").show(500);
 		setTimeout($.proxy(raiseAlert,data), data.time);
 	  })

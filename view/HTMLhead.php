@@ -13,3 +13,8 @@
 <div id="cssmenu" class="cssmenu">
 <?php View::load("menu.php");?>
 </div>
+<div>
+<audio id="sonidoalerta" >
+<source src="view/alerta.mp3"></source>
+</audio>
+</div>

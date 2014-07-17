@@ -6,10 +6,10 @@ require "../model/moduloMedicamento.php";
 require "../model/moduloAlerta.php";
 require "../model/moduloHistoricoMedicaciones.php";
 $m= new Medicamento ();
-if (isset($_POST['idMedicamento']) and isset($_POST['dosis']) and isset($_POST['idAlerta']) and isset($_POST['seRepite'])){
-	$m->descontarDosis($_POST['idMedicamento'],$_POST['dosis']);
-	Alerta::desactivarAlerta($_POST['idAlerta'],$_POST['seRepite']);
-	HistoricoMedicaciones::agregarHistorico($_POST['idMedicamento'],$_POST['dosis'],date("Y-m-d H:i:s"));
+if (isset($_REQUEST['idMedicamento']) and isset($_REQUEST ['dosis']) and isset($_REQUEST['idAlerta']) and isset($_REQUEST['seRepite'])){
+	Alerta::desactivarAlerta($_REQUEST['idAlerta'],$_REQUEST['seRepite']);
+	$m->descontarDosis($_REQUEST['idMedicamento'],$_REQUEST['dosis']);
+	HistoricoMedicaciones::agregarHistorico($_REQUEST['idMedicamento'],$_REQUEST['dosis'],date("Y-m-d H:i:s"));
 }
 
 

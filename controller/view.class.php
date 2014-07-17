@@ -22,9 +22,13 @@ Class View{
    
 	static public function goToPage($relativeUrl)
 	{
+		header("Location: http://" . View::baseUrl() . $relativeUrl);		
+	}
+	
+	static public function baseUrl()
+	{
 		$baseUrl = file_get_contents(__SITE_PATH . "/localurl");
 		$baseUrl = str_replace("index.php","",$baseUrl);
-		header("Location: http://" . $baseUrl . $relativeUrl);
-		
+		RETURN $baseUrl;
 	}
 }
